@@ -1,4 +1,4 @@
-# Sprint-1 Tasca-S1.03: Arrays
+# Sprint-1 Tasca S1.03: Arrays
 Exercicis de PHP practicant arrays.
 
 ## Tecnologies 
