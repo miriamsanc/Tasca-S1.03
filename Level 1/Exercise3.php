@@ -7,9 +7,9 @@ Per exemple:
 Si tenim [“hola”, “Php”, “Html”] retornarà true si preguntem per “h” però fals si preguntem per “l”.
 */
 
-function checkChar($words, $char){
+function checkCharacterInsideWords(array $words, string $char): bool {
     foreach ($words as $word){
-        if(strpos($word, $char)=== false){
+        if(stripos($word, $char)=== false){
             return false;
         }
     }
@@ -17,9 +17,19 @@ function checkChar($words, $char){
 }
 
 //Testing
-$words = ["hola", "Php", "html"];
+$words = ["Hola", "Php", "Html"];
 
-var_dump(checkChar($words, "h")); 
-var_dump(checkChar($words, "l")); 
+$wordstoString = implode(", ", $words);
+
+echo "En el listado [$wordstoString] todas las palabras contienen la letra H?";
+
+var_dump(checkCharacterInsideWords($words, "H"));
+
+echo "<br>";
+
+echo "En el listado [$wordstoString] todas las palabras contienen la letra l?"; 
+
+var_dump(checkCharacterInsideWords($words, "l")); 
+
 
 ?>
